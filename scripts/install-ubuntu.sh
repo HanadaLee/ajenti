@@ -10,10 +10,10 @@ echo ':: Adding repo entry'
 echo "deb http://repo.ajenti.org/debian main main ubuntu" > /etc/apt/sources.list.d/ajenti.list
 
 echo ':: Installing extra repo key for ubuntu 18.04'
-wget https://repo.hanada.info/ubuntu/key -O- | apt-key add -
+wget https://repo.hanada.info/universe/key -O- | apt-key add -
 
 echo ':: Adding extra repo entry'
-echo "deb https://repo.hanada.info/ubuntu bionic-compatible muitiverse" >> /etc/apt/sources.list.d/ajenti.list
+echo "deb https://repo.hanada.info/universe misc patch-ajenti" >> /etc/apt/sources.list.d/ajenti.list
 
 echo ':: Updating lists'
 apt-get update
